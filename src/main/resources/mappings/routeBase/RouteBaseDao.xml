@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jia.basis.modules.routebase.RouteBaseDao">
+	<select id="findList" resultType="RouteBase">
+		select * from route_base
+	</select>
+	<!-- 存储过程 无参数 -->
+	<select id="getList" resultType="RouteBase" statementType="CALLABLE">
+		{
+		call getList()
+		}
+	</select>
+
+	<!-- 存储过程 in/out -->
+	<select id="getTitle" parameterType="java.util.Map"
+		statementType="CALLABLE" resultType="java.util.HashMap">
+		{call getTitle(
+		#{inId,jdbcType=VARCHAR,mode=IN},
+		#{inRouteCode,jdbcType=VARCHAR,mode=IN},
+		#{outTitle,jdbcType=VARCHAR,mode=OUT}
+		)}
+	</select>
+</mapper>
