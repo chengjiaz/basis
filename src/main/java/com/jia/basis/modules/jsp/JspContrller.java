@@ -1,26 +1,26 @@
 package com.jia.basis.modules.jsp;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.jia.basis.common.controller.BaseController;
-
 /**
- * 
- * @author Administrator
- *
+ * @author zhangjiacheng
+ * @description: JspContrller
+ * @date 2019/7/2 17:05
  */
+
 @Controller
-public class JspContrller extends BaseController {
+@Slf4j
+public class JspContrller  {
 
 	@RequestMapping(value = { "/indexJsp" })
 	public String indexJsp() {
-		logger.info("JspContrller|indexJsp|method|into");
+		log.info("JspContrller|indexJsp|method|into");
 		return "routeBase/index";
 	}
 	@RequestMapping(value = { "/upLoadjsp" })
 	public String upLoadjsp() {
-		logger.info("JspContrller|upLoadjsp|method|into");
+		log.info("JspContrller|upLoadjsp|method|into");
 		return "upload/upload";
 	}
 	/**

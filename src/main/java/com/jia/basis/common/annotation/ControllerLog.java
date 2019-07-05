@@ -8,6 +8,11 @@ import java.lang.annotation.*;
 //3、RetentionPolicy.RUNTIME 注解在jvm加载的时候仍被保留
 @Target({ElementType.METHOD}) //定义了注解声明在哪些元素之前
 @Documented
+/**
+ * @author zhangjiacheng
+ * @description:
+ * @date 2019/7/2 17:05
+ */
 public @interface ControllerLog {
     //定义成员
     String descrption() default "" ;//描述

@@ -11,25 +11,11 @@ import org.springframework.stereotype.Component;
 public class ConfigValue {
 
 	@Value("${com.jia.ve.name}")
-	private  static  String name;
+	public    String name;
 	
 	@Value("${com.jia.ve.address}")
-	private  static String address;
+	public   String address;
 
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		ConfigValue.name = name;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		ConfigValue.address = address;
-	}
 
 }

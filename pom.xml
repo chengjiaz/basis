@@ -82,12 +82,9 @@
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>1.3.2</version>
+
 		</dependency>
-		<dependency>
-			<groupId>tk.mybatis</groupId>
-			<artifactId>mapper-spring-boot-starter</artifactId>
-			<version>2.0.3</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -218,6 +215,23 @@
 			<groupId>org.yaml</groupId>
 			<artifactId>snakeyaml</artifactId>
 		</dependency>
+		<!--20190704start-->
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-cache -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+			<version>2.1.6.RELEASE</version>
+		</dependency>
+		<!--20190704end-->
+		<!--20190705start-->
+		<!-- springboot2 应该是默认集成了druid-->
+		<!--解决异常:Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.9</version>
+		</dependency>
+		<!--20190705end-->
 	</dependencies>
 
 	<!--20190628指定配置文件start-->
@@ -263,23 +277,26 @@
 					<include>*.xml</include>
 					<include>*.properties</include>
 				</includes>
-				<filtering>false</filtering>
+				<filtering>true</filtering>
 			</resource>
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
 					<include>**/*.xml</include>
-
+					<include>**/**/*.properties</include>
+					<include>*.txt</include>
 					<include>*.properties</include>
 				</includes>
-				<filtering>false</filtering>
+				<filtering>true</filtering>
 			</resource>
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
+					<include>**/**/*.properties</include>
 					<include>static/**</include>
+					<include>*.txt</include>
 				</includes>
-				<filtering>false</filtering>
+				<filtering>true</filtering>
 			</resource>
 			<resource>
 				<directory>src/main/resources/env/${profile.active}</directory>

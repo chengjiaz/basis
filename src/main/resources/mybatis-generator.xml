@@ -14,14 +14,17 @@
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <javaModelGenerator targetPackage="com.jia.modules.dict" targetProject="D:\ideaWorkSpace\basis\src\main\java">
+        <!-- 生成model实体类文件位置 -->
+        <javaModelGenerator targetPackage="com.jia.basis.entity" targetProject="D:\ideaWorkSpace\basis\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.jia.modules.dict" targetProject="D:\ideaWorkSpace\basis\src\main\java">
+        <!-- 生成mapper.xml配置文件位置 -->
+        <sqlMapGenerator targetPackage="mappers" targetProject="D:\ideaWorkSpace\basis\src\main\resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.jia.modules.dict" targetProject="D:\ideaWorkSpace\basis\src\main\java">
+        <!-- 生成mapper接口文件位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.jia.basis.mapper" targetProject="D:\ideaWorkSpace\basis\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <table tableName="t_sys_dict"

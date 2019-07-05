@@ -6,7 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
+/**
+ * @author zhangjiacheng
+ * @description:
+ * @date 2019/7/2 17:05
+ */
 @RestController
 @RequestMapping("db")
 @Slf4j

@@ -5,6 +5,11 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 @Documented
+/**
+ * @author zhangjiacheng
+ * @description:
+ * @date 2019/7/2 17:05
+ */
 public @interface ServiceLog {
     //定义成员
     String decription() default "" ;
