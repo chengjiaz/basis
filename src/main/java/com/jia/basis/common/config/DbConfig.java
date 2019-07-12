@@ -6,8 +6,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * 数据库连接
+ * @author zhangjiacheng
+ */
 @Component
-//@ConfigurationProperties(prefix="spring.datasource")
 @Slf4j
 @Setter
 @Getter

@@ -29,8 +29,8 @@ public class JspContrller  {
 	 * 功能案例:九宫格。
 	 * 页面跳转
 	 */
-	@RequestMapping(value = { "/Jiugongge" })
-	public String Jiugongge() {
+	@RequestMapping(value = { "/jiugongge" })
+	public String jiugongge() {
 
 		return "jiugongge/jiugongge";
 	}

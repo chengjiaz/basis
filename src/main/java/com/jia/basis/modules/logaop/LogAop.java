@@ -1,4 +1,4 @@
-package com.jia.basis.modules.logAop;
+package com.jia.basis.modules.logaop;
 
 import com.jia.basis.common.annotation.ControllerLog;
 import com.jia.basis.common.annotation.ServiceLog;
@@ -68,7 +68,7 @@ public class LogAop {
         //拿到类里面的方法
         Method[] methods = targetClass.getMethods() ;
 
-        Map map = new HashMap() ;
+        Map map = new HashMap(16) ;
         String description = "" ;
         String businessType="";
         //遍历方法名，找到被调用的方法名
@@ -106,7 +106,7 @@ public class LogAop {
         //获取类里面的方法
         Method[] methods = targetClass.getMethods() ;
 
-        Map map = new HashMap() ;
+        Map map = new HashMap(16) ;
         String description = "" ;
         String businessType="";
         for (Method method : methods) {
@@ -188,17 +188,17 @@ public class LogAop {
          * 根据不同的业务类型,落进不同的表
          */
         int type = Integer.parseInt(getControllerMethodDescription(joinPoint).get("businessType").toString());
-
-        if(type==1){
-            //调用落库方法
-            logger.info("type=【{}】",type);
-        }else if(type==2){
-            //调用落库方法
-            logger.info("type=【{}】",type);
-        } else if(type==3){
-            //调用落库方法
-            logger.info("type=【{}】",type);
-        }
+        //代码逻辑如下
+//        if(type==1){
+//            //调用落库方法
+//            logger.info("type=【{}】",type);
+//        }else if(type==2){
+//            //调用落库方法
+//            logger.info("type=【{}】",type);
+//        } else if(type==3){
+//            //调用落库方法
+//            logger.info("type=【{}】",type);
+//        }
 
 
     }
@@ -212,6 +212,8 @@ public class LogAop {
     @AfterThrowing(pointcut = "controllerAspect()",throwing="e")
     public void doAfterThrowing(JoinPoint joinPoint, ApplicationException e) throws Throwable{
 
+        int errorMsgLength=300;
+
         logger.info("【{doAfterThrowing}】");
 
         /**
@@ -223,19 +225,19 @@ public class LogAop {
          * 异常处理
          */
         String errMsg =e.getMessage();
-        if(errMsg.length()>300){
+        if(errMsg.length()>errorMsgLength){
             errMsg=e.getMessage().substring(0,e.getMessage().charAt('\n'));
         }
 
 
         int type = Integer.parseInt(getServiceMethodMsg(joinPoint).get("businessType").toString());
-        if (type==1){
-
-        }else if(type==2){
-
-        }else if(type==3){
-
-        }
+//        if (type==1){
+//
+//        }else if(type==2){
+//
+//        }else if(type==3){
+//
+//        }
     }
 
 

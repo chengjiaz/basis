@@ -1,4 +1,4 @@
-package com.jia.basis.modules.autoConfig;
+package com.jia.basis.modules.autoconfig;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.jia.basis.modules.autoConfig;
+package com.jia.basis.modules.autoconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

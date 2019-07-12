@@ -33,13 +33,9 @@ public class BasisApplication extends SpringBootServletInitializer {
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(BasisApplication.class);
 	}
-//	@Bean
-//	public SqlSessionFactory sqlSessionFactory() throws Exception {
-//		SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-//		sessionFactory.setDataSource(dataSource);
-//		return sessionFactory.getObject();
-//	}
+
 	public static void main(String[] args) {
+
 		SpringApplication.run(BasisApplication.class, args);
 
 

@@ -2,6 +2,10 @@ package com.jia.basis.entity;
 
 import java.util.Date;
 
+/**
+ * 字段实体类
+ * @author zhangjiacheng
+ */
 public class SysDict {
     private Integer id;
 

@@ -1,7 +1,7 @@
 package com.jia.basis.modules.testcontroller;
 
 import com.alibaba.fastjson.JSON;
-import com.jia.basis.modules.autoConfig.AutoConfig;
+import com.jia.basis.modules.autoconfig.AutoConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

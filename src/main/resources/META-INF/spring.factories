@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.jia.basis.modules.autoConfig.AutoConfigPropertiesClass
+  com.jia.basis.modules.autoconfig.AutoConfigPropertiesClass
