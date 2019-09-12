@@ -247,6 +247,47 @@
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 		<!--20190712end-->
+		<!--20190729start-->
+		<!--解析xml-->
+		<!--jdom-->
+		<!-- https://mvnrepository.com/artifact/org.jdom/jdom -->
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+        <!--sax-->
+		<!-- https://mvnrepository.com/artifact/sax/sax -->
+		<dependency>
+			<groupId>sax</groupId>
+			<artifactId>sax</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<!--dom4j-->
+		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+		<!--20190729end-->
+
+		<!--20190814start-->
+		<!--bean 转成map -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.3</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		<!--20190814end-->
+
 	</dependencies>
 
 	<!--20190628指定配置文件start-->

@@ -3,6 +3,8 @@ package com.jia.basis.mapper;
 import com.jia.basis.entity.SysDict;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * 字典操作方法
  * @author zhangjiacheng
@@ -53,4 +55,9 @@ public interface SysDictMapper  {
      * @return
      */
     int updateByPrimaryKey(SysDict record);
+
+    /**
+     * 获取所有数据
+     */
+    List<SysDict> findSysList();
 }
