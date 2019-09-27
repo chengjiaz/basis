@@ -272,6 +272,13 @@
 		</dependency>
 
 		<!--20190729end-->
+		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc7 -->
+		<dependency>
+			<groupId>com.oracle.jdbc</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0.2</version>
+		</dependency>
+
 
 		<!--20190814start-->
 		<!--bean 转成map -->

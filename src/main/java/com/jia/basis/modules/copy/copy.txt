@@ -1,0 +1,23 @@
+场景一:两个类属性完全相同
+
+BeanUtils.copyProperties
+
+场景二:两个类存在不同属性
+
+思路流程:
+a 定义一个注解类。 该注解使用在预源类字段上,该注解属性为目标类属性
+
+b 定义一个通过copy类
+方法思路:
+a:通过getDeclaredFields获得类的所有声明的字段，即包括public、private和proteced(Field[])
+
+b: 循环 Field[]
+
+b1: 当前属性是否使用注解,是否使用注解通过方法:getAnnotation
+
+b1.1 如果有注解,则使用注解
+b1.2 不存在注解,则使用属性名
+
+c:通过getReadMethod方法获取当前属性的get方法
+
+d:通过invoke方法设置值
