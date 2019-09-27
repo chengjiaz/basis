@@ -1,0 +1,63 @@
+//springboot启动原理:
+
+
+
+idea 创建springboot项目
+
+springmvc-xml
+>初始化spring容器
+>扫描实例化bean
+>配置dispatchServlet
+
+
+53:24
+
+
+lambda  
+使用条件:函数式接口(接口中包含一个抽象接口)才能使用 
+语法格式: ()
+          ->
+		  {}
+		  
+		  
+检查异常:编译器要求你必须处置的异常
+
+非检查异常:编译器不要求强制处置的异常
+
+非运行时异常:RuntimeException以外的异常
+
+
+强   gc都不会去回收
+
+弱   gc会回收
+
+虚  随时都可能会被回收
+
+软  gc没有可回收对象时，才会回收
+
+
+key:threadlocal ; value:thread
+
+
+内存溢出  内存泄漏
+
+
+当前gc执行次数
+jstat -gc 进程号   ygc  fgc
+
+jps
+
+
+
+threadlocal
+
+jdbc连接池   spring事务传播行为
+
+
+threadlocal 缺陷:
+
+InheritableThreadLocal
+
+
+483966038
+

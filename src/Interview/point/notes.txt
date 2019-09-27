@@ -1,0 +1,30 @@
+>>Java 中 static 方法不能被覆盖， 因为方法覆盖是基于运行时动态绑定的， 而 static 方法
+是编译时静态绑定的。 static 方法跟类的任何实例都不相关， 所以概念上不适用。
+java 中也不可以覆盖 private 的方法， 因为 private 修饰的变量和方法只能在当前类中使用，
+如果是其他的类继承当前类是不能访问到 private 变量或方法的， 当然也不能覆盖
+
+>>PriorityQueue 是一个基于优先级堆的无界队列， 它的元素是按照自
+然顺序(natural order)排序的
+
+
+https://www.cnblogs.com/guodongdidi/p/6953217.html
+
+https://www.cnblogs.com/CarpenterLee/p/5488070.html
+
+https://www.cnblogs.com/linyufeng/p/8465170.html
+
+https://blog.csdn.net/onedaycbfly/article/details/79658016
+
+https://blog.csdn.net/woshizisezise/article/details/79374460
+
+
+手写一个线程安全的生产者与消费者
+
+
+
+Google Dapper|基于标注（annotation-based），又叫植入点或埋点/跟踪树和 span/
+
+
+Twitter 公司的 Zipkin
+
+淘宝鹰眼系统（EagleEye）
