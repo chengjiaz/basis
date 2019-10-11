@@ -1,0 +1,23 @@
+特点:
+类构造器私有
+持有自己类型的属性
+对外提供获取实例的静态方法
+写法:
+a饿汉式|如果从始至终从未使用过这个实例，则会造成内存的浪费/
+b懒汉式|线程不安全/
+c枚举方式|同时是线程安全且只能被实例化一次
+d双重检查模式|线程安全；延迟加载；效率较高
+进行了两次的判断，第一次是为了避免不要的实例，第二次是为了进行同步，避免多线程问题
+e 静态内部类
+public class Singleton {
+
+    private Singleton() {}
+
+    private static class SingletonInstance {
+        private static final Singleton INSTANCE = new Singleton();
+    }
+
+    public static Singleton getInstance() {
+        return SingletonInstance.INSTANCE;
+    }
+}
