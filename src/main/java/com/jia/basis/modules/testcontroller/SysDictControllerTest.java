@@ -24,10 +24,19 @@ public class SysDictControllerTest {
 
     @RequestMapping(value={"/get/{id}"},method = RequestMethod.POST)
     public String get(@PathVariable("id") int id){
-
-
         log.info("【{}】",JSON.toJSONString(sysDictService.selectByPrimaryKey(id)));
         return JSON.toJSONString(sysDictService.selectByPrimaryKey(id));
 
     }
+
+
+    @RequestMapping(value={"/findList"},method = RequestMethod.POST)
+    public String findList(){
+
+        return JSON.toJSONString(sysDictService.findSysList());
+
+    }
+
+
+
 }
