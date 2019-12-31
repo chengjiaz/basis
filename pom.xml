@@ -70,13 +70,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 		</dependency>
-
-		<!-- 异常:No persistence exception translators found in bean factory. Cannot 
-			perform exception translation. -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
 		<!-- (2) mybatis -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
@@ -270,16 +263,6 @@
 			<artifactId>dom4j</artifactId>
 			<version>2.1.1</version>
 		</dependency>
-
-		<!--20190729end-->
-		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc7 -->
-<!--		<dependency>-->
-<!--			<groupId>com.oracle.jdbc</groupId>-->
-<!--			<artifactId>ojdbc7</artifactId>-->
-<!--			<version>12.1.0.2</version>-->
-<!--		</dependency>-->
-
-
 		<!--20190814start-->
 		<!--bean 转成map -->
 		<dependency>
@@ -294,25 +277,6 @@
 			<classifier>jdk15</classifier>
 		</dependency>
 		<!--20190814end-->
-		<!--20191126整合jpa/start-->
-		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>2.2.2.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.0-api -->
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.0-api</artifactId>
-			<version>1.0.1.Final</version>
-		</dependency>
-
-		<!--20191126整合jpa/end-->
 
 	</dependencies>
 

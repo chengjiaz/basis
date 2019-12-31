@@ -1,4 +1,4 @@
-package jia.test.SnowFlakeUtilTest;
+package jia.test.snowflakeutiltest;
 
 import com.jia.basis.common.utils.SnowFlakeUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 public class SnowFlakeUtilTest {
 
     public static void main(String[] args) {
-       log.info("全局唯一id:【{}】", SnowFlakeUtil.getId());
+       log.info("SnowFlakeUtilTest:生成全局唯一id:【{}】", SnowFlakeUtil.getId());
     }
 }

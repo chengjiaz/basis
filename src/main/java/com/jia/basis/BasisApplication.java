@@ -1,16 +1,16 @@
 package com.jia.basis;
 
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.SqlSessionTemplate;
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import java.net.InetAddress;
 
 /**
  * //如果想法中使用的@Async,那么则需要在主方法中添加下面的注解(20181127)-第一步
@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @MapperScan(basePackages = "com.jia.basis.mapper")
 @EnableTransactionManagement
-
+@Slf4j
 public class BasisApplication extends SpringBootServletInitializer {
 
 	@Override
@@ -36,7 +36,7 @@ public class BasisApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(BasisApplication.class, args);
+		//SpringApplication.run(BasisApplication.class, args);
 
 
 		//关闭banner
@@ -50,6 +50,38 @@ public class BasisApplication extends SpringBootServletInitializer {
 		// SpringApplication application = new SpringApplication(BasisApplication.class);
 		// application.addListeners(new Listener("application.properties"));
 		// application.run(args);
+
+
+		SpringApplication app = new SpringApplication(BasisApplication.class);
+		Environment env = app.run(args).getEnvironment();
+		String protocol = "http";
+		if (env.getProperty("server.ssl.key-store") != null) {
+			protocol = "https";
+		}
+		String hostAddress = "localhost";
+		try {
+			hostAddress = InetAddress.getLocalHost().getHostAddress();
+		} catch (Exception e) {
+			log.warn("The host name could not be determined, using `localhost` as fallback");
+		}
+		log.info("\n----------------------------------------------------------\n\t" +
+						"Application '{}' is running! Access URLs:\n\t" +
+						"Local: \t\t{}://localhost:{}\n\t" +
+						"External: \t{}://{}:{}\n\t" +
+						"Profile(s): \t{}\n----------------------------------------------------------",
+				env.getProperty("spring.application.name"),
+				protocol,
+				env.getProperty("server.port"),
+				protocol,
+				hostAddress,
+				env.getProperty("server.port"),
+				env.getActiveProfiles());
+
+		String configServerStatus = env.getProperty("configserver.status");
+		log.info("\n----------------------------------------------------------\n\t" +
+						"Config Server: \t{}\n----------------------------------------------------------",
+				configServerStatus == null ? "Not found or not setup for this application" : configServerStatus);
+
 		
 		
 	}

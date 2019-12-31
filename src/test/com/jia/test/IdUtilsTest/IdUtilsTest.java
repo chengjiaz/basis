@@ -1,4 +1,4 @@
-package jia.test.IdUtilsTest;
+package jia.test.idutilstest;
 
 import com.jia.basis.common.utils.IdUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 public class IdUtilsTest {
     public static void main(String[] args) {
 
-        log.info("IdUtils生成id为:【{}】",IdUtils.getGenerateNumber());
+        log.info("IdUtils：生成全局唯一id:【{}】",IdUtils.getGenerateNumber());
     }
 }
