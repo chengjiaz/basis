@@ -11,9 +11,14 @@
     ID, DICT_NAME, DICT_VALUE, DICT_ORDER, STATUS, CREATE_USERID, CREATE_TIME, UPDATE_USERID, 
     UPDATE_TIME, NOTE, del_flag
   </sql>
+  <insert id="insertSelective"></insert>
+  <update id="updateByPrimaryKeySelective"></update>
+  <update id="updateByPrimaryKey"></update>
+  <delete id="deleteByPrimaryKey"></delete>
 
-  <!--获取数据数据-->
+    <!--获取数据数据-->
   <select id="findSysList" resultMap="BaseResultMap">
     select <include refid="Base_Column_List" /> from  t_sys_dict
   </select>
+  <select id="selectByPrimaryKey" resultType="com.jia.basis.entity.SysDict"></select>
 </mapper>
