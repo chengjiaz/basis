@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("redis")
 @Slf4j
-public class RedisControllerTest {
+public class RedisConfigController {
 
     @Autowired
     private RedisConfig redisConfig;
