@@ -7,6 +7,9 @@ package com.jia.basis.modules.testcontroller.thread.implway;
  */
 public class CreateThreadByExt extends  Thread{
 
+
+    //@NotThreadSafe
+    //@ThreadSafe
     public static void main(String[] args) {
 
     }
