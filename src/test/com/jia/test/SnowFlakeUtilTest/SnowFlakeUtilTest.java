@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class SnowFlakeUtilTest {
 
     public static void main(String[] args) {
-       log.info("SnowFlakeUtilTest:生成全局唯一id:【{}】", SnowFlakeUtil.getId());
+        log.info("SnowFlakeUtilTest:生成全局唯一id:【{}】", SnowFlakeUtil.getId());
+        log.info("SnowFlakeUtilTest:生成全局唯一id:【{}】", SnowFlakeUtil.getId().length());
     }
 }

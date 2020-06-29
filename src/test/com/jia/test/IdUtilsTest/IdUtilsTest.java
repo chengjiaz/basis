@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class IdUtilsTest {
     public static void main(String[] args) {
-
         log.info("IdUtils：生成全局唯一id:【{}】",IdUtils.getGenerateNumber());
+        log.info("IdUtils：生成全局唯一id:【{}】",IdUtils.getGenerateNumber().length());
     }
 }
